@@ -41,7 +41,7 @@ function sendMessage() {
     if (message.trim()) {
         socket.emit('send-chat-message', { name: userName, color: userColor, message: message });
         messageInput.value = '';
-        adjustHeight(); // Reset height after sending
+        adjustHeight(); 
         appendMessage(`${userName}: ${message}`, userColor);
     }
 }
